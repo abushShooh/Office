@@ -315,6 +315,42 @@
                 </div>
             </div>
         </section>
+
+        <section class="request" id="request">
+            <div class="request__overlay"></div>
+            <div class="request__container">
+                <h2 class="reveal">Вы готовы осуществить задуманное?</h2>
+                <p class="request__subtitle reveal" data-delay="70">До сих пор остались вопросы? Позвоните нам и компетентный специалист подробно ответит на них и предложит лучшее решение.</p>
+
+                <form class="request-form reveal" data-delay="120" action="#" method="post">
+                    <input type="text" name="name" placeholder="Ваша имя" aria-label="Ваше имя">
+                    <input type="tel" name="phone" placeholder="+7 (000) 000-0000" aria-label="Телефон">
+                    <input type="email" name="email" placeholder="E-mail" aria-label="E-mail">
+
+                    <fieldset class="request-form__services">
+                        <legend>Выберите услугу:</legend>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="office" checked>
+                            <span>Ремонт офиса</span>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="retail">
+                            <span>Ремонт торгового помещения</span>
+                        </label>
+
+                        <label class="service-option">
+                            <input type="radio" name="service" value="other">
+                            <span>Другое</span>
+                        </label>
+                    </fieldset>
+
+                    <button class="request-form__submit" type="submit">Оставить заявку</button>
+                    <p class="request-form__note">Оставляя заявку, вы соглашаетесь на обработку персональных данных и с условиями бронирования счёта</p>
+                </form>
+            </div>
+        </section>
     </main>
     <script src="../scripts/main.js"></script>
 </body>
