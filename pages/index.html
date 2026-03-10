@@ -91,38 +91,53 @@
             <div class="about-section__content">
                 <span class="about-section__label reveal">О компании</span>
                 <h2 class="reveal" data-delay="80">Взгляните на свой бизнес<br>по-новому</h2>
-                <p class="reveal" data-delay="140">Компания «АСКА» предлагает полный спектр услуг по восстановлению, полной или частичной замене несущих конструкций, инженерных коммуникаций и капитальный ремонт офисов «под ключ». С установкой новейшего оборудования и систем освещения, с заменой покрытий и мебели поменяется атмосфера, стиль и характер всего пространства.</p>
-                <a class="about-section__button reveal" data-delay="200" href="#">Подробнее</a>
+                <p class="reveal1" data-delay="140">Компания «АСКА» предлагает полный спектр услуг по восстановлению, полной или частичной замене несущих конструкций, инженерных коммуникаций и капитальный ремонт офисов «под ключ». С установкой новейшего оборудования и систем освещения, с заменой покрытий и мебели поменяется атмосфера, стиль и характер всего пространства.</p>
+                <a class="about-section__button reveal1" data-delay="200" href="#">Подробнее</a>
+            </div>
+        </section>
+
+        <section class="stages" id="stages">
+            <div class="stages__container">
+                <h2 class="reveal">Этапы работ</h2>
+                <p class="stages__subtitle reveal" data-delay="70">Какие работы включает в себя качественный капитальный ремонт офисов?</p>
+
+                <div class="stages__timeline">
+                    <article class="stage reveal" data-delay="110">
+                        <div class="stage__num">1</div>
+                        <div class="stage__content">
+                            <h3>Подготовительные</h3>
+                            <p>Получение технического заключения о допустимости и безопасности ранее выполненных работ. Оценка состояния (степени износа, масштаба повреждений) коммуникаций и конструкций, определение порядка и стоимости их восстановления.</p>
+                        </div>
+                    </article>
+
+                    <article class="stage reveal" data-delay="170">
+                        <div class="stage__num">2</div>
+                        <div class="stage__content">
+                            <h3>Шумные и черновые работы</h3>
+                            <ul>
+                                <li>Демонтаж перегородок, старой отделки до несущих конструкций.</li>
+                                <li>Возведение перегородок по проекту: из газобетона, кирпича, гипсокартона и проч.</li>
+                                <li>Разводка и испытания коммуникаций.</li>
+                                <li>Обработка поверхностей: выравнивание потолка и стен штукатуркой; полов - цементно-песчаной стяжкой.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="stage reveal" data-delay="230">
+                        <div class="stage__num">3</div>
+                        <div class="stage__content">
+                            <h3>Получистовые (подготовка под чистовую отделку)</h3>
+                            <ul>
+                                <li>Устранение мелких неровностей, недочетов черновой подготовки.</li>
+                                <li>Шпатлевка потолка.</li>
+                                <li>Покрытие всех поверхностей грунтовкой, составами под чистовую отделку и облицовку.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
-    <script>
-        (function () {
-            var revealElements = document.querySelectorAll('.reveal');
-            var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            if (reducedMotion) {
-                revealElements.forEach(function (el) {
-                    el.classList.add('in-view');
-                });
-                return;
-            }
-
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-                    var delay = Number(entry.target.dataset.delay || 0);
-                    window.setTimeout(function () {
-                        entry.target.classList.add('in-view');
-                    }, delay);
-                    observer.unobserve(entry.target);
-                });
-            }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
-
-            revealElements.forEach(function (el) {
-                observer.observe(el);
-            });
-        })();
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
