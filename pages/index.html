@@ -60,24 +60,24 @@
 
         <section class="advantages" id="advantages">
             <div class="advantages__container">
-                <span class="advantages__label">Преимущества</span>
-                <h2>Работайте с нами</h2>
-                <p class="advantages__subtitle">Капитальный ремонт офисов - путь к успеху и престижу по-новому</p>
+                <span class="advantages__label reveal">Преимущества</span>
+                <h2 class="reveal" data-delay="80">Работайте с нами</h2>
+                <p class="advantages__subtitle reveal" data-delay="140">Капитальный ремонт офисов - путь к успеху и престижу по-новому</p>
 
                 <div class="advantages__grid">
-                    <article class="adv-card">
+                    <article class="adv-card reveal" data-delay="0">
                         <div class="adv-card__icon">%</div>
                         <h3>Точная стоимость работ</h3>
                         <p>Выезд инженера-сметчика для расчета точной стоимости в течении 3-х часов</p>
                     </article>
 
-                    <article class="adv-card">
+                    <article class="adv-card reveal" data-delay="90">
                         <div class="adv-card__icon">%</div>
                         <h3>Четкие сроки на выполнение</h3>
                         <p>Работы проводятся в четко установленные сроки по договору и в строгом соответствии с нормами СНиП и СП</p>
                     </article>
 
-                    <article class="adv-card">
+                    <article class="adv-card reveal" data-delay="180">
                         <div class="adv-card__icon">%</div>
                         <h3>Гарантия на выполненные работы до 5-ти лет</h3>
                         <p>Чтобы поговорить со специалистом, пожалуйста, позвоните</p>
@@ -85,6 +85,44 @@
                 </div>
             </div>
         </section>
+
+        <section class="about-section" id="about-company">
+            <div class="about-section__overlay"></div>
+            <div class="about-section__content">
+                <span class="about-section__label reveal">О компании</span>
+                <h2 class="reveal" data-delay="80">Взгляните на свой бизнес<br>по-новому</h2>
+                <p class="reveal" data-delay="140">Компания «АСКА» предлагает полный спектр услуг по восстановлению, полной или частичной замене несущих конструкций, инженерных коммуникаций и капитальный ремонт офисов «под ключ». С установкой новейшего оборудования и систем освещения, с заменой покрытий и мебели поменяется атмосфера, стиль и характер всего пространства.</p>
+                <a class="about-section__button reveal" data-delay="200" href="#">Подробнее</a>
+            </div>
+        </section>
     </main>
+    <script>
+        (function () {
+            var revealElements = document.querySelectorAll('.reveal');
+            var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (reducedMotion) {
+                revealElements.forEach(function (el) {
+                    el.classList.add('in-view');
+                });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var delay = Number(entry.target.dataset.delay || 0);
+                    window.setTimeout(function () {
+                        entry.target.classList.add('in-view');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                });
+            }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+
+            revealElements.forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
