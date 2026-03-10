@@ -559,6 +559,88 @@ nav {
   top: 0;
 }
 
+.reasons {
+  position: relative;
+  background-image: url("../photos/benefites.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 10px !important;
+}
+
+.reasons__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 20, 30, 0.58);
+}
+
+.reasons__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.reasons__label {
+  display: block;
+  text-align: center;
+  color: #1ea0bf;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.reasons h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(42px, 4.5vw, 70px);
+  line-height: 1.07;
+  font-weight: 700;
+  margin-bottom: 58px;
+}
+
+.reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 34px;
+}
+
+.reason-card {
+  text-align: center;
+  color: #ffffff;
+}
+
+.reason-card__icon-wrap {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-card__icon-wrap img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.reason-card h3 {
+  font-size: clamp(30px, 2.2vw, 44px);
+  line-height: 1.14;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.reason-card p {
+  color: rgba(240, 245, 248, 0.9);
+  font-size: clamp(18px, 1.2vw, 24px);
+  line-height: 1.32;
+}
+
 .stage {
   padding: 10px 10px 10px 10px;
   border-radius: 14px;
@@ -752,6 +834,44 @@ nav {
   .stage__content ul {
     font-size: clamp(15px, 1.5vw, 18px);
   }
+
+  .reasons {
+    padding: 50px 16px;
+  }
+
+  .reasons__label {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .reasons h2 {
+    font-size: clamp(34px, 4.2vw, 52px);
+    margin-bottom: 38px;
+  }
+
+  .reasons__grid {
+    gap: 28px 20px;
+  }
+
+  .reason-card__icon-wrap {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 14px;
+  }
+
+  .reason-card__icon-wrap img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .reason-card h3 {
+    font-size: clamp(24px, 2vw, 30px);
+    margin-bottom: 10px;
+  }
+
+  .reason-card p {
+    font-size: clamp(15px, 1.4vw, 18px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -938,6 +1058,51 @@ nav {
 
   .stage__content li + li {
     margin-top: 6px;
+  }
+
+  .reasons {
+    padding: 50px 14px;
+  }
+
+  .reasons__label {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .reasons h2 {
+    font-size: clamp(30px, 9vw, 42px);
+    margin-bottom: 26px;
+  }
+
+  .reasons__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .reason-card {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  .reason-card__icon-wrap {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 12px;
+  }
+
+  .reason-card__icon-wrap img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .reason-card h3 {
+    font-size: clamp(24px, 7vw, 30px);
+    margin-bottom: 8px;
+  }
+
+  .reason-card p {
+    font-size: clamp(14px, 4.2vw, 17px);
+    line-height: 1.4;
   }
 
   .stage {
