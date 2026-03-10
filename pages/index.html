@@ -13,13 +13,13 @@
                 <img src="../photos/Лого.svg" alt="Логотип компании">
             </a>
 
-            <div class="containerInfo">
-                <ul>
-                    <li>О компании</li>
-                    <li>Новости</li>
-                    <li>Помощь</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
+            <div class="containerInfo" id="mobile-menu">
+                <ul class="nav-links">
+                    <li><a href="#about-company">О компании</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#stages">Этапы</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#clients">Контакты</a></li>
                 </ul>
 
                 <div class="support">
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <button class="menu-toggle" type="button" aria-label="Открыть меню">
+            <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -281,6 +281,36 @@
 
                     <article class="client-card reveal" data-delay="180">
                         <img src="../photos/Partners/03/Rectangle 61.svg" alt="Yoga Baby">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews" id="reviews">
+            <div class="reviews__container">
+                <h2 class="reveal">Отзывы</h2>
+                <p class="reviews__subtitle reveal" data-delay="70">Будем благодарны, если вы уделите время и напишите отзыв о нашей компании</p>
+
+                <div class="reviews__grid">
+                    <article class="review-card reveal" data-delay="0">
+                        <img class="review-card__avatar" src="../photos/review-1.svg" alt="Юрий Ставничий">
+                        <p class="review-card__text">Это супер крутая инструкция и вы делаете очень полезную вещь 🙂 Спасибо ❤</p>
+                        <h3>Юрий Ставничий</h3>
+                        <span>фотограф</span>
+                    </article>
+
+                    <article class="review-card reveal" data-delay="80">
+                        <img class="review-card__avatar" src="../photos/review-2.svg" alt="Александра Селезнева">
+                        <p class="review-card__text">Работа с сервисом приносит радость, потому что высочайший профессионализм, удобство, оперативность, и просто приятные люди!</p>
+                        <h3>Александра Селезнева</h3>
+                        <span>фотограф</span>
+                    </article>
+
+                    <article class="review-card reveal" data-delay="160">
+                        <img class="review-card__avatar" src="../photos/review-3.svg" alt="Александра Селезнева">
+                        <p class="review-card__text">Спасибо большое за помощь и содействие!</p>
+                        <h3>Александра Селезнева</h3>
+                        <span>фотограф</span>
                     </article>
                 </div>
             </div>
