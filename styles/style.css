@@ -1,9 +1,17 @@
-﻿* {
+﻿@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Steam', sans-serif;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -116,7 +124,7 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('../photos/background_MAin.svg');
+  background-image: url("../photos/background_MAin.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,7 +133,12 @@ nav {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(2, 48, 71, 0.58) 0%, rgba(2, 48, 71, 0.42) 48%, rgba(2, 48, 71, 0.2) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 48, 71, 0.58) 0%,
+    rgba(2, 48, 71, 0.42) 48%,
+    rgba(2, 48, 71, 0.2) 100%
+  );
 }
 
 .hero__content {
@@ -166,10 +179,12 @@ nav {
   justify-content: center;
   min-width: 178px;
   height: 44px;
+  padding: 0px 10px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, color 0.25s ease;
 }
 
 .hero .btn:hover {
@@ -203,6 +218,7 @@ nav {
   width: 34px;
   height: 34px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .hero__scroll span {
@@ -212,6 +228,104 @@ nav {
   border-bottom: 3px solid rgba(255, 255, 255, 0.9);
   border-right: 3px solid rgba(255, 255, 255, 0.9);
   transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+.advantages {
+  background: #f2f4f6;
+  padding: 95px 16px 110px;
+}
+
+.advantages__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.advantages__label {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1ea0bf;
+  margin-bottom: 22px;
+}
+
+.advantages h2 {
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1.05;
+  color: #0b1320;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.advantages__subtitle {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  color: #4a4f57;
+  font-size: clamp(24px, 2vw, 42px);
+  line-height: 1.25;
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+
+.adv-card {
+  text-align: center;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.adv-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.adv-card__icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ff8a00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 24px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.adv-card:hover .adv-card__icon {
+  transform: scale(1.06);
+  background: #fff9f1;
+  box-shadow: 0 00px 22px rgba(74, 72, 70, 0.25);
+}
+
+.adv-card h3 {
+  color: #06344b;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 18px;
+  min-height: 3.6em;
+}
+
+.adv-card p {
+  color: #96a8b7;
+  font-size: clamp(18px, 1.3vw, 30px);
+  line-height: 1.3;
+  max-width: 340px;
   margin: 0 auto;
 }
 
@@ -268,6 +382,47 @@ nav {
 
   .hero__note {
     font-size: 20px;
+  }
+
+  .advantages {
+    padding: 74px 16px 84px;
+  }
+
+  .advantages__label {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .advantages h2 {
+    font-size: clamp(36px, 4.4vw, 54px);
+    margin-bottom: 12px;
+  }
+
+  .advantages__subtitle {
+    font-size: clamp(20px, 2vw, 30px);
+    max-width: 700px;
+    margin-bottom: 42px;
+  }
+
+  .advantages__grid {
+    gap: 18px;
+  }
+
+  .adv-card__icon {
+    width: 84px;
+    height: 84px;
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .adv-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+    min-height: 3.4em;
+  }
+
+  .adv-card p {
+    font-size: clamp(15px, 1.2vw, 19px);
   }
 }
 
@@ -331,5 +486,52 @@ nav {
 
   .hero__scroll {
     bottom: 18px;
+  }
+
+  .advantages {
+    padding: 58px 14px 64px;
+  }
+
+  .advantages__label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .advantages h2 {
+    font-size: clamp(30px, 9vw, 42px);
+    margin-bottom: 10px;
+  }
+
+  .advantages__subtitle {
+    font-size: clamp(16px, 5vw, 22px);
+    margin-bottom: 28px;
+  }
+
+  .advantages__grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .adv-card {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+
+  .adv-card__icon {
+    width: 78px;
+    height: 78px;
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+
+  .adv-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    min-height: auto;
+  }
+
+  .adv-card p {
+    font-size: clamp(14px, 4.2vw, 18px);
   }
 }
