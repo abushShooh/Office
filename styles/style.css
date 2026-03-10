@@ -1603,3 +1603,131 @@ nav {
     font-size: clamp(12px, 3.6vw, 14px);
   }
 }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: #033e57;
+  padding: 54px 16px 72px;
+}
+
+.site-footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.site-footer__socials a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #ff9200;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-footer__socials a:hover {
+  transform: translateY(-2px);
+  background: #ff9200;
+  color: #033e57;
+}
+
+.site-footer__nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.site-footer__nav a {
+  text-decoration: none;
+  color: rgba(227, 236, 242, 0.92);
+  font-size: 24px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.site-footer__nav a:hover {
+  color: #ffb145;
+}
+
+.site-footer__copy {
+  color: rgba(199, 216, 226, 0.72);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .site-footer {
+    padding: 44px 16px 58px;
+  }
+
+  .site-footer__socials {
+    margin-bottom: 26px;
+  }
+
+  .site-footer__socials a {
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .site-footer__nav {
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+
+  .site-footer__nav a {
+    font-size: 20px;
+  }
+
+  .site-footer__copy {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 36px 14px 44px;
+  }
+
+  .site-footer__socials {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .site-footer__socials a {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .site-footer__nav {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .site-footer__nav a {
+    font-size: 18px;
+  }
+
+  .site-footer__copy {
+    font-size: 18px;
+  }
+}
